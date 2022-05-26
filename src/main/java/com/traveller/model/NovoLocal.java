@@ -2,22 +2,24 @@ package com.traveller.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity //Representa uma entidade dentro do Bando de Dados
 public class NovoLocal {
 	@Id //Faz com que o elemento seja único dentro do BD
 	
 	//CÓDIGO PARA O BD MYSQL
-	@GeneratedValue(strategy = GenerationType.IDENTITY) //Faz com que o valor do ID seja alterado automaticamente a cada novo cadastro
+	//@GeneratedValue(strategy = GenerationType.IDENTITY) //Faz com que o valor do ID seja alterado automaticamente a cada novo cadastro
 	
 	//CÓDIGO PARA O BD POSTGREE
-	//@GeneratedValue(generator = "increment")
-	//@GenericGenerator(name = "increment", strategy = "increment")
+	@GeneratedValue(generator = "increment")
+	@GenericGenerator(name = "increment", strategy = "increment")
 	
 	private Long id;
 	private String nome;
+	private String acessibilidade;
 	private String cidade;
 	private String estado;
 	private String pais;
@@ -31,6 +33,12 @@ public class NovoLocal {
 	private String descricao;
 	
 	
+	public String getAcessibilidade() {
+		return acessibilidade;
+	}
+	public void setAcessibilidade(String acessibilidade) {
+		this.acessibilidade = acessibilidade;
+	}
 	public Long getId() {
 		return id;
 	}
