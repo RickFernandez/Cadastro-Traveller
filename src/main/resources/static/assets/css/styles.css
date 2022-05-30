@@ -81,31 +81,6 @@ h4 {
 	height: 80%;
 }
 
-.notbg {
-	background-image: url(/assets/img/bg-vnoturna.jpg);
-	height: 80%;
-}
-
-.entbg {
-	background-image: url(/assets/img/bg-entretenimento.png);
-	height: 80%;
-}
-
-.cultbg {
-	background-image: url(/assets/img/bg-cultura.png);
-	height: 80%;
-}
-
-.dicbg {
-	background-image: url(/assets/img/bg-dicas.png);
-	height: 80%;
-}
-
-.alugbg {
-	background-image: url(/assets/img/bg-carro.jpg);
-	height: 80%;
-}
-
 .tempbg {
 	background-image: url(/assets/img/gastronomia/djapa/djapa.png);
 	height: 80%;

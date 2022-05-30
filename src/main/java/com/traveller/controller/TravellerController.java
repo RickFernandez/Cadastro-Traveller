@@ -61,29 +61,9 @@ public class TravellerController {
 		return "gastronomia";
 	}
 	
-	@GetMapping("/vidaNoturna")
+	@GetMapping("/erro")
 	public String vidaNoturna() {
-		return "vidaNoturna";
-	}
-	
-	@GetMapping("/entretenimento")
-	public String entretenimento() {
-		return "entretenimento";
-	}
-	
-	@GetMapping("/cultura")
-	public String cultura() {
-		return "cultura";
-	}
-	
-	@GetMapping("/dicas")
-	public String dicas() {
-		return "dicas";
-	}
-	
-	@GetMapping("/aluguelCarro")
-	public String aluguelCarro() {
-		return "aluguelCarro";
+		return "erro";
 	}
 	
 	@GetMapping("/pageTemplate")
