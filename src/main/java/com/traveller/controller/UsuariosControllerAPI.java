@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.yaml.snakeyaml.events.Event.ID;
 
 import com.traveller.model.Usuarios;
 import com.traveller.repository.UsuariosRepository;
@@ -35,7 +36,7 @@ public class UsuariosControllerAPI {
 	}
 	
 	@GetMapping ("/id")
-	public ResponseEntity<Usuarios> buscar(@PathVariable Long id) {
+	public ResponseEntity<Usuarios> buscar(@PathVariable ID id) {
 		Usuarios usuarios = usuariosRepository.getById(id);
 		
 		if (usuarios == null) {
@@ -45,7 +46,7 @@ public class UsuariosControllerAPI {
 	}
 	
 	@PutMapping("/{id}")
-	public ResponseEntity<Usuarios> atualizar(@PathVariable Long id, 
+	public ResponseEntity<Usuarios> atualizar(@PathVariable ID id, 
 			@RequestBody Usuarios usuarios) {
 		Usuarios existente = usuariosRepository.getById(id);
 		
@@ -60,7 +61,7 @@ public class UsuariosControllerAPI {
 	}
 	
 	@DeleteMapping("/{id}")
-	public ResponseEntity<Void> remover(@PathVariable Long id) {
+	public ResponseEntity<Void> remover(@PathVariable ID id) {
 		Usuarios usuarios = usuariosRepository.getById(id);
 		
 		if (usuarios == null) {
