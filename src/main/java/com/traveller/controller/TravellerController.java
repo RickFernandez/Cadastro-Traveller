@@ -36,4 +36,56 @@ public class TravellerController {
 		travellerRepository.save(requisicao);
 		return "redirect:/listaDados";
 	}
-}
+	
+	//========== NAVEGAÇÃO DE PÁGINAS ==========
+	
+	@GetMapping("/home")
+	public String index() {
+		return "index";
+	}
+	
+	@GetMapping("/hospedagem")
+	public String hospedagem() {
+		return "ondeHospedar";
+	}
+	
+	@GetMapping("/parques")
+	public String parques() {
+		return "parques";
+	}
+	
+	@GetMapping("/gastronomia")
+	public String gastronomia() {
+		return "gastronomia";
+	}
+	
+	@GetMapping("/vidaNoturna")
+	public String vidaNoturna() {
+		return "vidaNoturna";
+	}
+	
+	@GetMapping("/entretenimento")
+	public String entretenimento() {
+		return "entretenimento";
+	}
+	
+	@GetMapping("/cultura")
+	public String cultura() {
+		return "cultura";
+	}
+	
+	@GetMapping("/dicas")
+	public String dicas() {
+		return "dicas";
+	}
+	
+	@GetMapping("/aluguelCarro")
+	public String aluguelCarro() {
+		return "aluguelCarro";
+	}
+	
+	@GetMapping("/pageTemplate")
+	public String pageTemplate() {
+		return "pagetemplate";
+	}
+} 
