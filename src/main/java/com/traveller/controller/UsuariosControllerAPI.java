@@ -21,22 +21,21 @@ import com.traveller.repository.UsuariosRepository;
 @RestController
 @RequestMapping("/usuarios")
 public class UsuariosControllerAPI {
-	
 	@Autowired
 	private UsuariosRepository usuariosRepository;
 	
 	@PostMapping
-	public Usuarios adicionar(@RequestBody Usuarios usuarios) {
+	public Usuarios adicionarUsuarios(@RequestBody Usuarios usuarios) {
 		return usuariosRepository.save(usuarios);
 	}
 
 	@GetMapping
-	public List<Usuarios> listar() {
+	public List<Usuarios> listarUsuarios() {
 		return usuariosRepository.findAll();
 	}
 	
-	@GetMapping ("/id")
-	public ResponseEntity<Usuarios> buscar(@PathVariable ID id) {
+	@GetMapping ("/{id}")
+	public ResponseEntity<Usuarios> buscarUsuarios(@PathVariable ID id) {
 		Usuarios usuarios = usuariosRepository.getById(id);
 		
 		if (usuarios == null) {
@@ -46,7 +45,7 @@ public class UsuariosControllerAPI {
 	}
 	
 	@PutMapping("/{id}")
-	public ResponseEntity<Usuarios> atualizar(@PathVariable ID id, 
+	public ResponseEntity<Usuarios> atualizarUsuarios(@PathVariable ID id, 
 			@RequestBody Usuarios usuarios) {
 		Usuarios existente = usuariosRepository.getById(id);
 		
@@ -61,7 +60,7 @@ public class UsuariosControllerAPI {
 	}
 	
 	@DeleteMapping("/{id}")
-	public ResponseEntity<Void> remover(@PathVariable ID id) {
+	public ResponseEntity<Void> removerUsuarios(@PathVariable ID id) {
 		Usuarios usuarios = usuariosRepository.getById(id);
 		
 		if (usuarios == null) {
@@ -70,5 +69,4 @@ public class UsuariosControllerAPI {
 		usuariosRepository.delete(usuarios);
 		return ResponseEntity.noContent().build();
 	}
-
 }

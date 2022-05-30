@@ -1,5 +1,7 @@
 package com.traveller.controller;
 
+
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,25 +21,25 @@ public class TravellerController {
 	@Autowired
 	private TravellerRepository travellerRepository; //Acorda o BD neste Controller
 	
-	@GetMapping("/listaDados")
+	@GetMapping("/listaLocais")
 	public String listaDados(Model request) {
 		List<NovoLocal> lista = travellerRepository.findAll(); //Faz uma chamada no BD e carrega as informações dentro da 'lista'
-		request.addAttribute("listaDados", lista); //Adiciona os itens da 'lista' no atributo 'listaDados'
-		return "listaDados";
+		request.addAttribute("listaLocais", lista); //Adiciona os itens da 'lista' no atributo 'listaDados'
+		return "listaLocais";
 	}
 	
-	@GetMapping("/formulario")
-	public String formulario() {
-		return "formulario";
+	@GetMapping("/cadastroLocal")
+	public String cadastroLocal() {
+		return "cadastroLocal";
 	}
 	
-	@PostMapping("/formularioNovo") //Recebe 'PostMapping' pq este método acorda com um POST da página de formulário (recebe dados de um novo cadastro)
-	public String formularioNovo(NovoLocal requisicao) {
+	@PostMapping("/localNovo") //Recebe 'PostMapping' pq este método acorda com um POST da página de formulário (recebe dados de um novo cadastro)
+	public String localNovo(NovoLocal requisicao) {
 		travellerRepository.save(requisicao);
-		return "redirect:/listaDados";
+		return "redirect:/listaLocais";
 	}
 	
-	//========== NAVEGAÇÃO DE PÁGINAS ==========
+	//========== NAVEGAÇÃO DE PÁGINAS HTML==========
 	
 	@GetMapping("/home")
 	public String index() {

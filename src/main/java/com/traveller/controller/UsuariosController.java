@@ -9,16 +9,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.traveller.model.NovoLocal;
 import com.traveller.model.Usuarios;
 import com.traveller.repository.UsuariosRepository;
 
 @Controller
 @RequestMapping("/")
 public class UsuariosController {
-	
 	@Autowired
-	private UsuariosRepository usuarioRepository;
+	private UsuariosRepository usuariosRepository;
 	
 	@GetMapping("cadastroUsuario")
 	public String cadastroUsuario() {
@@ -27,14 +25,14 @@ public class UsuariosController {
 	
 	@PostMapping("/usuarioNovo")
 	public String usuarioNovo(Usuarios requisicao) {
-		usuarioRepository.save(requisicao);
+		usuariosRepository.save(requisicao);
 		return "redirect:/listaUsuarios";
 	}
 	
 	
 	@GetMapping("/listaUsuarios")
 	public String listaUsuarios(Model request) {
-		List<Usuarios> lista = usuarioRepository.findAll();
+		List<Usuarios> lista = usuariosRepository.findAll();
 		request.addAttribute("listaUsuarios", lista);
 		return "listaUsuarios";
 	}

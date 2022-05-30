@@ -26,6 +26,8 @@ public class TravellerControllerAPI {
 	@Autowired //Faz uma injeção de instância, ou seja, ele faz a instância do objeto automaticamente sem precisar utilizar o 'new'
 	private TravellerRepository travellerRepository;
 	
+	
+	//====================== CADASTRO DE LOCAIS ======================
 	@GetMapping("/teste")
 	public String teste() {
 		return "Application is ON";
@@ -83,4 +85,5 @@ public class TravellerControllerAPI {
 		
 		return ResponseEntity.noContent().build();
 	}
+	
 }
