@@ -24,9 +24,9 @@ public class NovoLocal {
 	private String estado;
 	private String pais;
 	private String endereco;
-	private int latitude;
-	private int longitude;
-	private int numContato;
+	private String latitude;
+	private String longitude;
+	private String numContato;
 	private String email;
 	private String site;
 	private String tipo;
@@ -75,22 +75,22 @@ public class NovoLocal {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
-	public int getLatitude() {
+	public String getLatitude() {
 		return latitude;
 	}
-	public void setLatitude(int latitude) {
+	public void setLatitude(String latitude) {
 		this.latitude = latitude;
 	}
-	public int getLongitude() {
+	public String getLongitude() {
 		return longitude;
 	}
-	public void setLongitude(int longitude) {
+	public void setLongitude(String longitude) {
 		this.longitude = longitude;
 	}
-	public int getNumContato() {
+	public String getNumContato() {
 		return numContato;
 	}
-	public void setNumContato(int numContato) {
+	public void setNumContato(String numContato) {
 		this.numContato = numContato;
 	}
 	public String getEmail() {
