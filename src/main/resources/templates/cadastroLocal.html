@@ -68,19 +68,19 @@
 			<div class="form-group">
 				<h3> Localização </h3>
 				<label> Latitude: </label>
-				<input class="form-control" type="number" name="latitude" placeholder="Informe a latitudedo local" required="required">
+				<input class="form-control" type="text" name="latitude" placeholder="Informe a latitudedo local" required="required">
 			</div>
 			
 			<div class="form-group">
 				<label> Longitude: </label>
-				<input class="form-control" type="number" name="longitude" placeholder="Informe a longitude" required="required">
+				<input class="form-control" type="text" name="longitude" placeholder="Informe a longitude" required="required">
 			</div>
 			
 <!--================ CONTATO ================-->
 			<div class="form-group">
 				<h3> Informações de Contato </h3>
 				<label> Telefone: </label>
-				<input class="form-control" type="number" name="numContato" placeholder="Informe o telefone ou WhatsApp do local" required="required">
+				<input class="form-control" type="text" name="numContato" placeholder="Informe o telefone ou WhatsApp do local" required="required">
 			</div>
 			
 			<div class="form-group">
@@ -93,7 +93,13 @@
 				<input class="form-control" type="text" name="site" placeholder="http://">
 			</div>
 			
-			<button class="btn btn-primary btn-lg btn-block" type="submit">Cadastrar</button>
+			<div class="btns-form">
+				<button class="btn btn-primary btn-lg btn-block" type="submit">Cadastrar</button>
+				
+				<a href="home">
+					<input type="button" value="Home" class="btn btn-primary btn-lg btn-block">
+				</a>
+			</div>
 		</form>
 	</div>
 </main>
