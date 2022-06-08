@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lista de Cadastros</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+	<div>
+		<h1>Usuários Cadastrados</h1>
+		<hr>
+		
+		<table class="table table-striped">
+			<thead class="thead-dark"> 
+				<tr>
+					<th scope="col"> # </th>
+					<th scope="col"> Nome </th>
+					<th scope="col"> Email </th>
+					<th scope="col"> Senha </th>
+					<th scope="col"> Status </th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr th:each = "usuario : ${listaUsuarios}">
+					<td th:text = "${usuario.id}"> 1 </td>
+					<td th:text = "${usuario.nome}"> Nome </td>
+					<td th:text = "${usuario.email}"> Email </td>
+					<td th:text = "${usuario.senha}"> Senha </td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gastronomia - DJAPA</title>
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+	<div class="btn-container">
+		<button class="button" name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+		<button class="button" name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+	</div>
+
+	<header class="tempbg" alt="/">
+		<nav class="navbar navbar-default">
+			<div class="container">
+
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+						data-target="#collapse-navbar" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+
+					<a class="navbar-brand" href="#">Gulliver Traveller</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="collapse-navbar">
+					<ul class="nav navbar-nav">
+						<li><a href="/index.html">Home</a></li>
+						<li><a href="/ondeHospedar.html">Onde se Hospedar</a></li>
+						<li><a href="/parques.html">Parques</a></li>
+						<li><a href="/gastronomia.html">Gastronomia</a></li>
+						<li><a href="/vidaNoturna.html">Vida Noturna</a></li>
+						<li><a href="/entretenimento.html">Entretenimento</a></li>
+						<li><a href="/cultura.html">Cultura</a></li>
+						<li><a href="/dicas.html">Dicas</a></li>
+						<li><a href="/aluguelCarro.html">Alugue seu Carro</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container gulliver-bannerWrapper">
+			<div class="gulliver-banner">
+				<h1>DJAPA</h1>
+				<a href="/gastronomia.html">Gastronomia</a>
+			</div>
+		</div>
+
+	</header>
+
+	<section id="sobre-nos" class="container">
+		<h2>O Restaurante</h2>
+		<p>O Djapa já é um dos melhores restaurantes japoneses de rodízio de São Paulo, segundo a crítica especializada e os clientes.
+
+			Agora temos mais uma boa notícia para compartilhar: acabamos de receber o prêmio Destaque de Acessibilidade do Guia de Rodas, a maior plataforma de acessibilidade da América Latina. Somos o primeiro restaurante japonês do Brasil avaliado pelos próprios usuários do aplicativo a receber a premiação.”
+			
+			O Djapa merece esta premiação porque atende a todos os critérios de acessibilidade, na opinião de nossos usuários”, afirma Bruno Mahfuz, fundador do Guia de Rodas, cadeirante desde 2001. “Além de tudo, ainda oferece uma ótima comida japonesa”.O restaurante Djapa, especializado em rodízio japonês, já foi projetado para atender as necessidades especiais desde a abertura.
+			Logo na entrada, dispõe de um elevador para acesso ao salão. O objetivo é oferecer acessibilidade para gestantes, idosos, mães com crianças de colo, cadeirantes e pessoas com necessidades especiais. “É fundamental que os empresários tenham consciência da importância da acessibilidade”, afirma o empresário José Miguel Hallage, sócio proprietário do restaurante.
+
+			Além do elevador, os 150 lugares estão muito bem distribuídos em um espaço amplo e aconchegante, facilitando a passagem dos cadeirantes. “A gente poderia apertar mais para comportar 200 pessoas no salão, mas optamos em deixar um espaço suficiente para a circulação de cadeirantes por todo o salão”, ressalta Hallage. Além do espaço amplo, há um banheiro no térreo adaptado para receber pessoas com baixa mobilidade.
+			
+			As mesas são na altura adequada para que o cadeirante possa se alimentar sem nenhuma restrição.
+			
+			Desta forma, quem precisa de maior mobilidade pode apreciar os 42 pratos que compõe o rodízio japonês com maior tranquilidade.</p>
+		<div class="row">
+			<img class="img-responsive col-sm-8" src="assets/img/gastronomia/djapa/rodizio_djapa.png"
+				alt="/">
+	</section>
+
+	<div class="jumbotron">
+		<div class="container">
+			<h3><b>Prêmios Recebidos</b></h3>
+			<p>Além do reconhecimento pelo prêmio Destaque do Guia de Rodas, o Djapa foi efeito o melhor restaurante japonês em votação popular e o segundo melhor rodízio japonês pela crítica especializada, segundo a revista Veja São Paulo (2015-2016). Desde a abertura, fica entre os 10 melhores rodízios japoneses de São Paulo, na eleição de Veja Comer e Beber.
+
+				Graças às avaliações positivas dos clientes, o TripAdvisor, o site mais popular de viagens e restaurantes, concede o selo de excelência ao restaurante desde 2016. Hoje o Djapa ocupa o posto número 1 entre 835 restaurantes japoneses avaliados do Trip Advisor.</p>
+		</div>
+	</div>
+
+	<section id="sobre-nos" class="container">
+		<h2>Informações</h2>
+		<ul>
+			<li>Djapa – Rua Gaivota, 168 – Moema – São Paulo.</li>
+			<li>Tel (11) 2691-2003 e 2691-2004.</li> 
+			<li>Horário de funcionamento: Segunda quinta, das 12h às 15h e das 19h às 23h; sexta, das 12h às 15h e das 19h às 0h; sábado, das 12h às 0h; domingo, das 12h às 22h30.</li>
+			<li>Cartões: todos;</li> 
+			<li>Vallet: R$ 25</li>
+		</ul>
+		<div class="row">
+			<article id="map">
+                <script type="text/javascript" src="assets/js/maps/djapa.js"></script>
+            </article>
+	</section>
+
+
+	<section id="destaques">
+
+		<h2 class="container titulo-destaques">Galeria</h2>
+
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			</ol>
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner" role="listbox">
+				<figure class="item active">
+					<img src="assets/img/gastronomia/djapa/Ambiente2.png" alt="/">
+				</figure>
+				<figure class="item">
+					<img src="assets/img/gastronomia/djapa/Bebidas-Cardapio-Djapa.png" alt="/">
+				</figure>
+				<figure class="item">
+					<img src="assets/img/gastronomia/djapa/Sobremesas-Cardapio-Djapa.png" alt="/">
+				</figure>
+			</div>
+
+			<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Anterior</span>
+			</a>
+			<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Próximo</span>
+			</a>
+		</div>
+	</section>
+	<footer class="text-center text-white fixed-bottom">
+
+		<!-- Copyright -->
+		<div class="fotdiv text-center p-3">
+			© 2022 Copyright:
+			<a class="text-white">Gulliver Traveller - FIAP</a>
+		</div>
+		<!-- Copyright -->
+	</footer>
+
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/js/navbar-animation.js"></script>
+	<script src="assets/js/fontsize.js"></script>
+	      <!-- Faz conexão com a API do googlemaps -->
+		  <script async defer
+		  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJ1PpkyZtiOBkiknLCJlj5U9WI5oDVAT0&callback=initMap">
+	  </script>
+</body>
+
+</html>

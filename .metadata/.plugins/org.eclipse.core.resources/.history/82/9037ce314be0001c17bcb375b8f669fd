@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lista de Dados</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+	
+	<div class="container">
+		<h1>Locais Cadastrados</h1>
+		<hr>
+	
+		<table class="table table-striped">
+			<thead class="thead-dark"> 
+				<tr>
+					<th scope="col"> # </th>
+					<th scope="col"> Nome </th>
+					<th scope="col"> Cidade </th>
+					<th scope="col"> Estado </th>
+					<th scope="col"> Pais </th>
+					<th scope="col"> Endereço </th>
+					<th scope="col"> Latitude </th>
+					<th scope="col"> Longitude </th>
+					<th scope="col"> Num. Contato </th>
+					<th scope="col"> Email </th>
+					<th scope="col"> Site </th>
+					<th scope="col"> Tipo </th>
+					<th scope="col"> Descrição </th>
+					<th scope="col"> Acessibilidade </th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr th:each = "local : ${listaDados}">
+					<td th:text = "${local.id}"> 1 </td>
+					<td th:text = "${local.nome}"> Nome </td>
+					<td th:text = "${local.cidade}"> Cidade </td>
+					<td th:text = "${local.estado}"> Estado </td>
+					<td th:text = "${local.pais}"> Pais </td>
+					<td th:text = "${local.endereco}"> Endereço </td>
+					<td th:text = "${local.latitude}"> Latitude </td>
+					<td th:text = "${local.longitude}"> Longitude </td>
+					<td th:text = "${local.numContato}"> Contato </td>
+					<td th:text = "${local.email}"> Email </td>
+					<td th:text = "${local.site}"> Site </td>
+					<td th:text = "${local.tipo}"> Tipo </td>
+					<td th:text = "${local.descricao}"> Descrição </td>
+					<td th:text = "${local.acessibilidade}"> Acessibilidade </td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+</body>
+</html>

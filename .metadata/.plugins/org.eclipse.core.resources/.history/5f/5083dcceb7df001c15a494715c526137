@@ -1,0 +1,5 @@
+package com.traveller.repository;
+
+public class UsuariosRepository {
+
+}

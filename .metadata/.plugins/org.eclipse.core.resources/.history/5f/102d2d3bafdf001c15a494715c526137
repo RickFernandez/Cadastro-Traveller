@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parques</title>
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<!-- Carrega ícones na biblioteca fontawesome-->
+	<script src="https://kit.fontawesome.com/7c3ebcc100.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div class="btn-container">
+        <button class="button" name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+        <button class="button" name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+    </div>
+
+	<header class="parqbg">
+		<nav class="navbar navbar-default">
+			<div class="container">
+
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+						data-target="#collapse-navbar" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+
+					<a class="navbar-brand" href="#">Gulliver Traveller</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="collapse-navbar">
+					<ul class="nav navbar-nav">
+						<li><a href="home">Home</a></li>
+						<li><a href="hospedagem">Onde se Hospedar</a></li>
+						<li><a href="parques">Parques</a></li>
+						<li><a href="gastronomia">Gastronomia</a></li>
+						<li><a href="vidaNoturna">Vida Noturna</a></li>
+						<li><a href="entretenimento">Entretenimento</a></li>
+						<li><a href="cultura">Cultura</a></li>
+						<li><a href="dicas">Dicas</a></li>
+						<li><a href="aluguelCarro">Alugue seu Carro</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container gulliver-bannerWrapper">
+			<div class="gulliver-banner">
+				<h1>Parques</h1>
+			</div>
+		</div>
+
+	</header>
+
+	<section id="sobre-nos" class="container">
+		<h2>Legenda</h2>
+		<div class="row">
+
+			<div class="panel-group col-sm-6" id="paineis-sobre">
+				<div class="panel panel-default">
+					<div class="panel-heading" data-toggle="collapse" data-target="#primeiro-paragrafo"
+						data-parent="#paineis-sobre">
+						<span class="fa-solid fa-universal-access fa-2xl checked" aria-hidden="true"
+							title="Símbolo de Acessibilidade Universal."></span>
+						<p>Este símbolo indica o quanto de acessibilidade é oferecida pelo local. Quanto mais pontos
+							tiver, melhor o índice de acessibilidade.</p>
+
+					</div>
+				</div>
+	</section>
+
+	<section id="sobre-nos" class="container">
+		<h2>PARQUE IBIRAPUERA</h2>
+		<div class="row">
+			<img class="img-responsive col-sm-6" src="assets/img/parques/ibirapuera/ibirapuera.jpg">
+
+			<div class="panel-group col-sm-6" id="paineis-sobre">
+				<div class="panel panel-default">
+					<div class="panel-heading" data-toggle="collapse" data-target="#primeiro-paragrafo"
+						data-parent="#paineis-sobre">
+						<h3 class="panel-title">Avaliação</h3>
+						<span class="fa-solid fa-universal-access fa-xl checked" aria-hidden="true"></span>
+						<span class="fa-solid fa-universal-access fa-xl checked" aria-hidden="true"></span>
+						<span class="fa-solid fa-universal-access fa-xl checked" aria-hidden="true"
+							title="5 pontos"></span>
+						<span class="fa-solid fa-universal-access fa-xl checked" aria-hidden="true"></span>
+						<span class="fa-solid fa-universal-access fa-xl checked" aria-hidden="true"></span>
+					</div>
+
+					<div class="collapse in" id="primeiro-paragrafo">
+						<div class="panel-body">
+							<p>Para tornar o Parque Ibirapuera um local mais acessível para todas as pessoas, a Urbia,
+								responsável pela gestão do Parque, desenvolveu um projeto prevendo medidas inclusivas e
+								intervenções em diversas estruturas, vias e equipamentos. O objetivo? Promover a
+								acessibilidade e melhoria da mobilidade no local. Além de materiais de sinalização e
+								comunicação inclusiva, caminhos complementares acessíveis, construção de rampas de
+								acesso e redução das guias de calçadas estão no planejamento.</p>
+							<button class="btn btn-primary btn-lg" id="btdesign">Ver Mais</button>
+						</div>
+					</div>
+				</div>
+	</section>
+
+	<section id="sobre-nos" class="container bgcz">
+		<h2>Lorem Ipsum</h2>
+		<div class="row">
+			<img class="img-responsive col-sm-6"
+				src="assets/img/imagemtemplt.png">
+
+			<div class="panel-group col-sm-6" id="paineis-sobre">
+				<div class="panel panel-default">
+					<div class="panel-heading" data-toggle="collapse" data-target="#primeiro-paragrafo"
+						data-parent="#paineis-sobre">
+						<h3 class="panel-title">Avaliação</h3>
+						<span class="fa-solid fa-universal-access fa-xl checked" aria-hidden="true"></span>
+						<span class="fa-solid fa-universal-access fa-xl checked" aria-hidden="true"></span>
+						<span class="fa-solid fa-universal-access fa-xl checked" aria-hidden="true"
+							title="3 pontos"></span>
+					</div>
+
+					<div class="collapse in" id="primeiro-paragrafo">
+						<div class="panel-body">
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, asperiores ipsum vel
+								id nobis magnam sapiente excepturi tempora ea, ad aut officia ipsam aspernatur modi
+								doloremque? Nulla laborum cumque id inventore modi quos, voluptatibus dicta saepe eaque
+								earum natus sit delectus voluptate quas architecto unde, placeat molestiae quidem vero.
+								Maxime.</p>
+							<button class="btn btn-primary btn-lg" id="btdesign">Ver Mais</button>
+						</div>
+					</div>
+				</div>
+	</section>
+
+	<section id="sobre-nos" class="container">
+		<h2>Lorem Ipsum</h2>
+		<div class="row">
+			<img class="img-responsive col-sm-6" src="assets/img/imagemtemplt.png">
+
+			<div class="panel-group col-sm-6" id="paineis-sobre">
+				<div class="panel panel-default">
+					<div class="panel-heading" data-toggle="collapse" data-target="#primeiro-paragrafo"
+						data-parent="#paineis-sobre">
+						<h3 class="panel-title">Avaliação</h3>
+						<span class="fa-solid fa-universal-access fa-xl checked" aria-hidden="true"></span>
+						<span class="fa-solid fa-universal-access fa-xl checked" aria-hidden="true"
+							title="4 pontos"></span>
+						<span class="fa-solid fa-universal-access fa-xl checked" aria-hidden="true"></span>
+						<span class="fa-solid fa-universal-access fa-xl checked" aria-hidden="true"></span>
+					</div>
+
+					<div class="collapse in" id="primeiro-paragrafo">
+						<div class="panel-body">
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, asperiores ipsum vel
+								id nobis magnam sapiente excepturi tempora ea, ad aut officia ipsam aspernatur modi
+								doloremque? Nulla laborum cumque id inventore modi quos, voluptatibus dicta saepe eaque
+								earum natus sit delectus voluptate quas architecto unde, placeat molestiae quidem vero.
+								Maxime.</p>
+							<button class="btn btn-primary btn-lg" id="btdesign">Ver Mais</button>
+						</div>
+					</div>
+				</div>
+	</section>
+
+	<section id="sobre-nos" class="container bgcz">
+		<h2>Lorem Ipsum</h2>
+		<div class="row">
+			<img class="img-responsive col-sm-6"
+				src="assets/img/imagemtemplt.png">
+			<div class="panel-group col-sm-6" id="paineis-sobre">
+				<div class="panel panel-default">
+					<div class="panel-heading" data-toggle="collapse" data-target="#primeiro-paragrafo"
+						data-parent="#paineis-sobre">
+						<h3 class="panel-title">Avaliação</h3>
+						<span class="fa-solid fa-universal-access fa-xl checked" aria-hidden="true"></span>
+						<span class="fa-solid fa-universal-access fa-xl checked" aria-hidden="true"></span>
+						<span class="fa-solid fa-universal-access fa-xl checked" aria-hidden="true"></span>
+						<span class="fa-solid fa-universal-access fa-xl checked" aria-hidden="true"></span>
+						<span class="fa-solid fa-universal-access fa-xl checked" aria-hidden="true"
+							title="5 pontos"></span>
+					</div>
+
+					<div class="collapse in" id="primeiro-paragrafo">
+						<div class="panel-body">
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, asperiores ipsum vel
+								id nobis magnam sapiente excepturi tempora ea, ad aut officia ipsam aspernatur modi
+								doloremque? Nulla laborum cumque id inventore modi quos, voluptatibus dicta saepe eaque
+								earum natus sit delectus voluptate quas architecto unde, placeat molestiae quidem vero.
+								Maxime.</p>
+							<button class="btn btn-primary btn-lg" id="btdesign">Ver Mais</button>
+						</div>
+					</div>
+				</div>
+	</section>
+
+	<footer class="text-center text-white fixed-bottom">
+
+		<!-- Copyright -->
+		<div class="fotdiv text-center p-3">
+			© 2022 Copyright:
+			<a class="text-white">Gulliver Traveller - FIAP</a>
+		</div>
+		<!-- Copyright -->
+	</footer>
+
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/js/navbar-animation.js"></script>
+	<script src="assets/js/fontsize.js"></script>
+</body>
+
+</html>
