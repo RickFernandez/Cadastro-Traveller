@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cadastro de Locais</title>
+    <link
+      rel="stylesheet"
+      href="/assets/bootstrap/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/css/styles.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/7c3ebcc100.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="btn-container">
+      <button
+        class="button"
+        name="increase-font"
+        id="increase-font"
+        title="Aumentar fonte"
+      >
+        A +
+      </button>
+      <button
+        class="button"
+        name="decrease-font"
+        id="decrease-font"
+        title="Diminuir fonte"
+      >
+        A -
+      </button>
+    </div>
+
+    <header class="bgCadastroLocal" alt="">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle collapsed"
+              data-toggle="collapse"
+              data-target="#collapse-navbar"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="home">Gulliver Traveller</a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="collapse-navbar">
+            <ul class="nav navbar-nav">
+              <li><a href="home">Home</a></li>
+              <li><a href="hospedagem">Onde se Hospedar</a></li>
+              <li><a href="parques">Parques</a></li>
+              <li><a href="gastronomia">Gastronomia</a></li>
+              <li><a href="erro">Vida Noturna</a></li>
+              <li><a href="erro">Entretenimento</a></li>
+              <li><a href="erro">Cultura</a></li>
+              <li><a href="erro">Dicas</a></li>
+              <li><a href="erro">Alugue seu Carro</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container gulliver-bannerWrapper">
+        <div class="gulliver-banner">
+          <h3><b>Você sabia que pode colaborar com nosso projeto?</b></h3>
+
+          <p>
+            Cadastre locais que possuem acessibilidade e nos ajude a fornecer
+            cada vez mais informações e dicas para quem precisa!
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- <img class="bgCadastroLocal" src="../static/assets/img/bg-cadastroLocal.jpg" alt="" /> -->
+
+      <div class="container">
+        <h1>Cadastre um novo local</h1>
+        <hr />
+
+        <form method="POST" action="localNovo" name="formulario">
+          <!--================ TIPO E ACESSIBILIDADE ================-->
+          <div class="form-group">
+            <h3>Qualo tipo de local que você quer cadastrar?</h3>
+            <label> Tipo: </label>
+            <input
+              type="text"
+              class="form-control"
+              name="tipo"
+              placeholder="Ex: Hotel, Parque, Restaurante..."
+               
+            />
+          </div>
+
+          <div class="form-group">
+            <h3>O local é acessível para quais públicos?</h3>
+            <input
+              class="form-control"
+              type="text"
+              name="acessibilidade"
+              placeholder="Informe quais tipos de acessibilidade há no local"
+               
+            />
+          </div>
+
+          <!--================ NOME E DESCRIÇÃO ================-->
+          <div class="form-group">
+            <h3>Nome e Descrição</h3>
+            <label> Nome: </label>
+            <input
+              class="form-control"
+              type="text"
+              name="nome"
+              placeholder="Informe o nome do local"
+               
+            />
+          </div>
+
+          <div class="form-group">
+            <label> Descrição: </label>
+            <input
+              class="form-control"
+              name="descricao"
+              placeholder="Descreva sobre o local (ex: ambiente, atendimento, etc...)"
+               
+            />
+          </div>
+
+          <!--================ ENDEREÇO ================-->
+          <div class="form-group">
+            <h3>Endereço</h3>
+            <label> Endereço: </label>
+            <input
+              id="endereco"
+              class="form-control"
+              type="text"
+              name="endereco"
+              placeholder="Informe o endereço do local (Rua/Avenida zyx, 123)"
+               
+            />
+          </div>
+
+          <div class="form-group">
+            <label> Cidade: </label>
+            <input
+              id="cidade"
+              class="form-control"
+              type="text"
+              name="cidade"
+              placeholder="Informe a cidade"
+               
+            />
+          </div>
+
+          <div class="form-group">
+            <label> Estado: </label>
+            <input
+              id="estado"
+              class="form-control"
+              type="text"
+              name="estado"
+              placeholder="Informe o estado"
+               
+            />
+          </div>
+
+          <div class="form-group">
+            <label> País: </label>
+            <input
+              onmouseout="ativaLatitudeLongitude()"
+              id="pais"
+              class="form-control"
+              type="text"
+              name="pais"
+              placeholder="Informe o país" 
+            />
+          </div>
+
+          <!--================ LOCALIZAÇÃO ================-->
+          <div class="form-group">
+            <h3>Localização</h3>
+            <label> Latitude: </label>
+            <input
+              id="latitude"
+              class="form-control"
+              type="hidden"
+              name="latitude"
+              placeholder="Informe a latitudedo local"
+              value = ""
+            />
+          </div>
+
+          <div class="form-group" type="hidden">
+            <label> Longitude: </label>
+            <input
+              id="longitude"
+              class="form-control"
+              type="hidden"
+              name="longitude"
+              placeholder="Informe a longitude"
+               
+            />
+          </div>
+
+          <!--================ CONTATO ================-->
+          <div class="form-group">
+            <h3>Informações de Contato</h3>
+            <label> Telefone: </label>
+            <input
+              id="numContato"
+              class="form-control"
+              type="text"
+              name="numContato"
+              placeholder="Informe o telefone ou WhatsApp do local"
+               
+            />
+          </div>
+
+          <div class="form-group">
+            <label> Email: </label>
+            <input
+              class="form-control"
+              type="email"
+              name="email"
+              placeholder="Informe o endereço de email"
+            />
+          </div>
+
+          <div class="form-group">
+            <label> Website: </label>
+            <input
+              class="form-control"
+              type="text"
+              name="site"
+              placeholder="http://"
+            />
+          </div>
+
+          <div class="btns-form">
+            <button class="btn btn-primary btn-lg btn-block" type="submit" id="btn">
+              Cadastrar
+            </button>
+
+            <a href="home">
+              <input
+                type="button"
+                value="Home"
+                class="btn btn-primary btn-lg btn-block"
+              />
+            </a>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/js/navbar-animation.js"></script>
+    <script src="/assets/js/fontsize.js"></script>
+    <script src="/assets/js/maps/localNovo.js"></script>
+  </body>
+</html>

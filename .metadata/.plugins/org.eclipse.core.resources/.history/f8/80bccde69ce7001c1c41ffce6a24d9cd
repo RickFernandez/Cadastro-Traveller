@@ -1,0 +1,102 @@
+const btn = document.getElementById('btn');
+
+btn.addEventListener("click", function(e) {
+	e.preventDefault(); //Desativa o SUBMIT do botão
+	
+	let endereco = document.getElementById('endereco');
+	const valorEndereco = endereco.value; //Coleta o valor 
+	console.log(valorEndereco);
+	
+	let cidade = document.getElementById('cidade');
+	const valorCidade = cidade.value;
+	console.log(valorCidade);
+	
+	let pais = document.getElementById('pais');
+	const valorPais = pais.value;
+	console.log(valorPais);
+	
+	
+	const request = new XMLHttpRequest()
+	const url = `http://api.positionstack.com/v1/forward?access_key=1e01f5c97d2859d96fc3d8cbb723c3e5&query= ${valorEndereco}, ${valorCidade}, ${valorPais}`;
+	
+	console.log(url)
+	request.open(
+	  'GET',
+	  url
+		// Exemplo URL forward (busca pelo endereço) - http://api.positionstack.com/v1/forward?access_key=1e01f5c97d2859d96fc3d8cbb723c3e5&query= Avenida Doutor Laerte Setubal 610, São Paulo, Brazil'
+		//Exemplo URF reverse (busca pela latitude) -'http://api.positionstack.com/v1/reverse?access_key=1e01f5c97d2859d96fc3d8cbb723c3e5&query= -23.620438756102672, -46.73192466520103'
+	)
+	
+	request.send()
+	request.onload = () => {
+	  console.log(request)
+	  if (request.status == 200) {
+		const dados = JSON.parse(request.response); //Converte o JSON(request.response) para um Array(dados)
+		let latitude = dados["data"]["0"]["latitude"];
+		let longitude = dados["data"]["0"]["longitude"];
+		
+		console.log(latitude);
+		console.log(longitude);
+	  } else {
+	    console.log(`error ${request.status} ${request.statusText}`)
+	  }
+	}
+})
+
+let endereco = document.getElementById('endereco').value;
+let cidade = document.getElementById('cidade').value;
+let estado = document.getElementById('estado').value;
+let pais = document.getElementById('pais').value;
+
+pais.addEventListener("onmouseout", mostraLatitudeLongitude);
+
+function mostraLatitudeLongitude() {
+	console.log(endereco.value);
+	console.log(cidade.value);
+	console.log(estado.value);
+	console.log(pais.value);
+	
+	const request = new XMLHttpRequest()
+	const url = `http://api.positionstack.com/v1/forward?access_key=1e01f5c97d2859d96fc3d8cbb723c3e5&query= ${endereco}, ${cidade}, ${pais}`;
+	
+	console.log(url)
+	request.open(
+	  'GET',
+	  url
+		// Exemplo URL forward (busca pelo endereço) - http://api.positionstack.com/v1/forward?access_key=1e01f5c97d2859d96fc3d8cbb723c3e5&query= Avenida Doutor Laerte Setubal 610, São Paulo, Brazil'
+		//Exemplo URF reverse (busca pela latitude) -'http://api.positionstack.com/v1/reverse?access_key=1e01f5c97d2859d96fc3d8cbb723c3e5&query= -23.620438756102672, -46.73192466520103'
+	)
+	
+	request.send()
+	request.onload = () => {
+	  console.log(request)
+	  if (request.status == 200) {
+		const dados = JSON.parse(request.response); //Converte o JSON(request.response) para um Array(dados)
+		let latitude = dados["data"]["0"]["latitude"];
+		let longitude = dados["data"]["0"]["longitude"];
+		
+		console.log(latitude);
+		console.log(longitude);
+	  } else {
+	    console.log(`error ${request.status} ${request.statusText}`)
+	  }
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

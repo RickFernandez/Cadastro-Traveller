@@ -1,0 +1,8 @@
+package com.traveller.geocoding;
+
+import java.net.URL;
+
+public class GoogleGeocodiongService {
+
+	URL url = new URL("http://api.positionstack.com/v1/forward?access_key=1e01f5c97d2859d96fc3d8cbb723c3e5&query=40.7638435,-73.9729691");
+}
