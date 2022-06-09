@@ -70,4 +70,5 @@ public class TravellerController {
 	public String pageTemplate() {
 		return "pagetemplate";
 	}
+	
 } 
