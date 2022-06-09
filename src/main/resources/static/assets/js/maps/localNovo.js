@@ -15,7 +15,7 @@ function ativaLatitudeLongitude() {
 	
 	
 	const request = new XMLHttpRequest()
-	const url = `http://api.positionstack.com/v1/forward?access_key=1e01f5c97d2859d96fc3d8cbb723c3e5&query= ${valorEndereco}, ${valorCidade}, ${valorPais}`;
+	const url = `https://api.positionstack.com/v1/forward?access_key=1e01f5c97d2859d96fc3d8cbb723c3e5&query= ${valorEndereco}, ${valorCidade}, ${valorPais}`;
 	
 	console.log(url)
 	request.open(
